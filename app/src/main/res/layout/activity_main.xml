@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <FrameLayout
         android:id="@+id/container"
@@ -18,7 +17,23 @@
         <androidx.camera.view.PreviewView
             android:id="@+id/previewView"
             android:layout_width="300dp"
-            android:layout_height="300dp" />
+            android:layout_height="300dp" >
+        </androidx.camera.view.PreviewView>
+
+        <com.google.android.material.slider.Slider
+            android:id="@+id/activiySlider"
+            android:layout_width="300dp"
+            android:layout_height="20dp"
+            android:contentDescription="@string/app_name"
+            android:value="50.0"
+            android:valueFrom="0.0"
+            android:valueTo="100.0"
+            app:thumbColor="#660000"
+            app:thumbStrokeColor="#555555"
+            app:thumbStrokeWidth="2dp"
+            app:trackColorActive="#660000"
+            app:trackColorInactive="#333333" />
+
     </FrameLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
